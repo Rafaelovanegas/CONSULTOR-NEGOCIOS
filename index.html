@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Consultor de Negocios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- PWA estilo app en iPhone -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Consultor" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>Consultor de Negocios</h1>
+      <p class="subtitle">Diagnóstico express en 5 áreas clave</p>
+      <p id="last-saved" class="small-text"></p>
+    </header>
+
+    <main class="app-main">
+      <section class="intro">
+        <p>Califica del <strong>1 al 5</strong> cada afirmación:</p>
+        <ul class="legend">
+          <li>1 = Muy mal</li>
+          <li>3 = A medias</li>
+          <li>5 = Excelente</li>
+        </ul>
+      </section>
+
+      <div id="questions-container"></div>
+
+      <section class="actions">
+        <button id="calculate-btn" class="primary-btn">Ver diagnóstico</button>
+        <button id="reset-btn" class="secondary-btn">Resetear respuestas</button>
+      </section>
+
+      <section id="results" class="results hidden">
+        <h2>Resultado general</h2>
+        <p id="overall-text" class="overall-text"></p>
+
+        <div id="category-results" class="category-results"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
